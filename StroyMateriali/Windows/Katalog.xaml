@@ -1,0 +1,32 @@
+﻿<Window x:Class="StroyMateriali.Windows.Katalog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StroyMateriali.Windows"
+        mc:Ignorable="d"
+        Title="Каталог" Style="{StaticResource Windows}">
+    <DockPanel>
+        <DockPanel Height="75" DockPanel.Dock="Top">
+            <Image Source="/Resources/Image/icon.png" Width="75" HorizontalAlignment="Left"/>
+            <TextBlock Style="{StaticResource TextBlocks}" >Строй материалы</TextBlock>
+            <Button Style="{StaticResource Buttons}" x:Name="Exit">Выход</Button>
+            <Button Style="{StaticResource Buttons}" x:Name="TovarAdd" Click="TovarAdd_Click" Visibility="Visible">Добавить товар</Button>
+            <TextBlock Style="{StaticResource TextBlocks}" x:Name="UserIma" Width="300"></TextBlock>
+        </DockPanel>
+        <StackPanel x:Name="PoiskandFiltr" Visibility="Visible" Orientation="Horizontal" Height="35" DockPanel.Dock="Top">
+            <TextBox x:Name="Poist" Width="200"/>
+            <ComboBox x:Name="FiltrProizvoditel">
+                <ComboBoxItem Content="Все производители"/>
+            </ComboBox>
+            <ComboBox x:Name="Filtr">
+                <ComboBoxItem Content="Все производители"/>
+            </ComboBox>
+        </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Visible">
+            <StackPanel x:Name="Cards">
+                
+            </StackPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Window>
