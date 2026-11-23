@@ -15,12 +15,16 @@
             <TextBlock Style="{StaticResource TextBlocks}" x:Name="UserIma" Width="300"></TextBlock>
         </DockPanel>
         <StackPanel x:Name="PoiskandFiltr" Visibility="Visible" Orientation="Horizontal" Height="35" DockPanel.Dock="Top">
-            <TextBox x:Name="Poist" Width="200"/>
-            <ComboBox x:Name="FiltrProizvoditel">
-                <ComboBoxItem Content="Все производители"/>
+            <TextBox x:Name="Poisk" Width="200" TextChanged="PoiskChanged"/>
+            <ComboBox x:Name="FiltrProizvoditel" SelectionChanged="FiltrProizvoditelChanged">
             </ComboBox>
-            <ComboBox x:Name="Filtr">
-                <ComboBoxItem Content="Все производители"/>
+            <ComboBox x:Name="Sortirovka" SelectionChanged="SortirovkaChanged" SelectedIndex="0">
+                <ComboBoxItem>Цена возрастание</ComboBoxItem>
+                <ComboBoxItem>Цена убывание</ComboBoxItem>
+                <ComboBoxItem>Количество возрастание</ComboBoxItem>
+                <ComboBoxItem>Количество убывание</ComboBoxItem>
+                <ComboBoxItem>Скидка возрастание</ComboBoxItem>
+                <ComboBoxItem>Скидка убывание</ComboBoxItem>
             </ComboBox>
         </StackPanel>
         <ScrollViewer VerticalScrollBarVisibility="Visible">

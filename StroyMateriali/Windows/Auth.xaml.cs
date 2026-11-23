@@ -30,7 +30,7 @@ namespace StroyMateriali.Windows
                     MessageBox.Show("Логин или пароль неверные");
                 else
                 {
-                    var okno = new StroyMateriali.Windows.Katalog(user.Ima);
+                    var okno = new StroyMateriali.Windows.Katalog(user);
                     okno.Show();
                     Close();
                 }
