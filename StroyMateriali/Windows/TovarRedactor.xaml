@@ -1,0 +1,38 @@
+﻿<Window x:Class="StroyMateriali.Windows.TovarRedactor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StroyMateriali.Windows"
+        mc:Ignorable="d"
+        Title="Редактирование товара" Style="{StaticResource Windows}">
+    <DockPanel>
+        <StackPanel Orientation="Vertical">
+            <TextBlock>Имя</TextBlock>
+            <TextBox x:Name="ImaBox" MaxLength="350"/>
+            <TextBlock>Описание</TextBlock>
+            <TextBox x:Name="OpisanieBox" MaxLength="350"/>
+            <TextBlock>Производитель</TextBlock>
+            <ComboBox x:Name="ProizvoditelBox"></ComboBox>
+            <TextBlock>Поставщик</TextBlock>
+            <ComboBox x:Name="PostavshikBox"></ComboBox>
+            <TextBlock>Категория</TextBlock>
+            <ComboBox x:Name="KategoriaBox"></ComboBox>
+            <TextBlock>Количество</TextBlock>
+            <TextBox x:Name="KolichestvoBox"/>
+            <TextBlock>Единица</TextBlock>
+            <TextBox x:Name="EdinicaBox"/>
+            <TextBlock>Цена</TextBlock>
+            <TextBox x:Name="CenaBox"/>
+            <TextBlock>Скидка</TextBlock>
+            <TextBox x:Name="SkidkaBox"/>
+
+            <Viewbox Height="200" Width="200" Stretch="Uniform">
+                <Image Source="/Resources/Image/picture.png" x:Name="Photo"/>
+            </Viewbox>
+            <Button x:Name="PhotoChange">Загрузить фото</Button>
+            <Button x:Name="Save">Сохранить</Button>
+        </StackPanel>
+
+    </DockPanel>
+</Window>

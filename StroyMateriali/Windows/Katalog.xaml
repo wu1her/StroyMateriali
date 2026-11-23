@@ -10,15 +10,15 @@
         <DockPanel Height="75" DockPanel.Dock="Top">
             <Image Source="/Resources/Image/icon.png" Width="75" HorizontalAlignment="Left"/>
             <TextBlock Style="{StaticResource TextBlocks}" >Строй материалы</TextBlock>
-            <Button Style="{StaticResource Buttons}" x:Name="Exit">Выход</Button>
-            <Button Style="{StaticResource Buttons}" x:Name="TovarAdd" Click="TovarAdd_Click" Visibility="Visible">Добавить товар</Button>
+            <Button x:Name="Exit">Выход</Button>
+            <Button x:Name="TovarAdd" Click="TovarAdd_Click" Visibility="Visible">Добавить товар</Button>
             <TextBlock Style="{StaticResource TextBlocks}" x:Name="UserIma" Width="300"></TextBlock>
         </DockPanel>
         <StackPanel x:Name="PoiskandFiltr" Visibility="Visible" Orientation="Horizontal" Height="35" DockPanel.Dock="Top">
-            <TextBox x:Name="Poisk" Width="200" TextChanged="PoiskChanged"/>
-            <ComboBox x:Name="FiltrProizvoditel" SelectionChanged="FiltrProizvoditelChanged">
+            <TextBox x:Name="Poisk" Width="200" TextChanged="ObnovaKatalog"/>
+            <ComboBox x:Name="FiltrProizvoditel" SelectionChanged="ObnovaKatalog">
             </ComboBox>
-            <ComboBox x:Name="Sortirovka" SelectionChanged="SortirovkaChanged" SelectedIndex="0">
+            <ComboBox x:Name="Sortirovka" SelectionChanged="ObnovaKatalog" SelectedIndex="0">
                 <ComboBoxItem>Цена возрастание</ComboBoxItem>
                 <ComboBoxItem>Цена убывание</ComboBoxItem>
                 <ComboBoxItem>Количество возрастание</ComboBoxItem>

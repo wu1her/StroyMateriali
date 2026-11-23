@@ -116,6 +116,9 @@
     <Compile Include="Windows\TovarCard.xaml.cs">
       <DependentUpon>TovarCard.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\TovarRedactor.xaml.cs">
+      <DependentUpon>TovarRedactor.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -137,6 +140,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\TovarCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\TovarRedactor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

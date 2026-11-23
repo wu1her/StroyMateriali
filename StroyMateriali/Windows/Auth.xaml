@@ -17,8 +17,8 @@
             <TextBlock Style="{StaticResource TextBlocks}">Пароль</TextBlock>
             <TextBox Style="{StaticResource TextBoxs}" x:Name="ParolBox"></TextBox>
 
-            <Button Style="{StaticResource Buttons}" Click="Auth_Click" >Войти</Button>
-            <Button Style="{StaticResource Buttons}" Click="AuthGhost_Click">Войти как гость</Button>
+            <Button Click="Auth_Click" >Войти</Button>
+            <Button Click="AuthGhost_Click">Войти как гость</Button>
         </StackPanel>
     </DockPanel>
 </Window>
