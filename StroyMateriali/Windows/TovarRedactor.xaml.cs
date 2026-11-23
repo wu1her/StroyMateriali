@@ -1,27 +1,51 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using StroyMateriali.Models;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace StroyMateriali.Windows
 {
-    /// <summary>
-    /// Логика взаимодействия для TovarRedactor.xaml
-    /// </summary>
     public partial class TovarRedactor : Window
     {
-        public TovarRedactor()
+        public TovarRedactor(Tovar tovar)
         {
             InitializeComponent();
+                try
+                {
+                using (var db = new StroyMaterialiEntities())
+                {
+                    ProizvoditelBox.ItemsSource = db.Proizvoditel.Select(svyaz => svyaz.Ima).ToList();
+                    KategoriaBox.ItemsSource = db.Kategoria.Select(svyaz => svyaz.Ima).ToList();
+                    PostavshikBox.ItemsSource = db.Postavshik.Select(svyaz => svyaz.Ima).ToList();
+                }
+                if (tovar == null)
+                        Title = "Добавление товара";
+                    else
+                    {
+                        Title = "Редактирование товара";
+                        ImaBox.Text = tovar.Ima;
+                        OpisanieBox.Text = tovar.Opisanie;
+                        ProizvoditelBox.SelectedItem = tovar.ImaProizvoditel;
+                        PostavshikBox.SelectedItem = tovar.ImaPostavshika;
+                        KategoriaBox.SelectedItem = tovar.ImaKategoria;
+                        KolichestvoBox.Text = tovar.Kolichestvo.ToString();
+                        CenaBox.Text = tovar.Cena.ToString();
+                        EdinicaBox.Text = tovar.Edinica.ToString();
+                        SkidkaBox.Text = tovar.Skidka.ToString();
+                        try
+                        {
+                            Photo.Source = new BitmapImage(new Uri("/Resources/Image/" + tovar.Photo, UriKind.Relative));
+
+                            if (string.IsNullOrEmpty(tovar.Photo))
+                                Photo.Source = new BitmapImage(new Uri("/Resources/Image/picture.png", UriKind.Relative));
+                        }
+                        catch
+                        {
+                            Photo.Source = new BitmapImage(new Uri("/Resources/Image/picture.png", UriKind.Relative));
+                        }
+                    }
+                } catch { MessageBox.Show("Ошибка загрузки"); }
         }
     }
 }

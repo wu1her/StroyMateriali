@@ -89,8 +89,7 @@ namespace StroyMateriali.Windows
                     {
                         card.MouseDoubleClick += (s, e) => 
                         {
-                            var okno = new TovarRedactor();
-                            okno.Show();
+                            new TovarRedactor(tovar).ShowDialog();
                         };
                     }
                     Cards.Children.Add(card);
@@ -99,7 +98,7 @@ namespace StroyMateriali.Windows
         }
         private void TovarAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            new TovarRedactor(null).ShowDialog();
         }
         private void ObnovaKatalog(object sender, RoutedEventArgs e)
         {
