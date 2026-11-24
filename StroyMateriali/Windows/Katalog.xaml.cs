@@ -29,7 +29,12 @@ namespace StroyMateriali.Windows
                 if (polzovatel != null)
                 {
                     if (polzovatel.Role.Any(rol => rol.ID_Role == 1 || rol.ID_Role == 2))
+                    {
                         PoiskandFiltr.Visibility = Visibility.Visible;
+                        ZakaziKnopka.Visibility = Visibility.Visible;
+
+                    }
+
                     if (polzovatel.Role.Any(rol => rol.ID_Role == 1))
                     {
                         TovarAdd.Visibility = Visibility.Visible;
@@ -110,6 +115,12 @@ namespace StroyMateriali.Windows
             var okno = new StroyMateriali.Windows.Auth();
             okno.Show();
             Close();
+        }
+        private void Zakazi_Click(object sender, RoutedEventArgs e)
+        {
+            var okno = new Zakazi(pravoredactir);
+            okno.Owner = this;
+            okno.ShowDialog();
         }
     }
 }

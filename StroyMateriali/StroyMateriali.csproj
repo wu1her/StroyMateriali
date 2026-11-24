@@ -119,6 +119,15 @@
     <Compile Include="Windows\TovarRedactor.xaml.cs">
       <DependentUpon>TovarRedactor.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Windows\ZakazCard.xaml.cs">
+      <DependentUpon>ZakazCard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Zakazi.xaml.cs">
+      <DependentUpon>Zakazi.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\ZakazRedactir.xaml.cs">
+      <DependentUpon>ZakazRedactir.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -144,6 +153,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\TovarRedactor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ZakazCard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\Zakazi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\ZakazRedactir.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

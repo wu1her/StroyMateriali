@@ -1,0 +1,19 @@
+﻿<Window x:Class="StroyMateriali.Windows.Zakazi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Заказы" Style="{StaticResource Windows}">
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Height="75">
+            <Image Source="/Resources/Image/icon.png" Width="75"/>
+            <TextBlock Style="{StaticResource TextBlocks}">Заказы</TextBlock>
+            <Button Click="Nazad_Click">Назад</Button>
+            <Button x:Name="DobavitBox" Click="Dobavit_Click"
+                    Visibility="Collapsed">Добавить заказ</Button>
+        </StackPanel>
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <StackPanel x:Name="Cards"/>
+        </ScrollViewer>
+    </DockPanel>
+</Window>

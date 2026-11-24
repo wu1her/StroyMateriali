@@ -11,10 +11,11 @@
             <Image Source="/Resources/Image/icon.png" Width="75" HorizontalAlignment="Left"/>
             <TextBlock Style="{StaticResource TextBlocks}" >Строй материалы</TextBlock>
             <Button x:Name="Exit" Click="Exit_Click">Выход</Button>
-            <Button x:Name="TovarAdd" Click="TovarAdd_Click" Visibility="Visible">Добавить товар</Button>
+            <Button x:Name="TovarAdd" Click="TovarAdd_Click" Visibility="Collapsed">Добавить товар</Button>
+            <Button x:Name="ZakaziKnopka" Click="Zakazi_Click" Visibility="Collapsed">Заказы</Button>
             <TextBlock Style="{StaticResource TextBlocks}" x:Name="UserIma" Width="300"></TextBlock>
         </DockPanel>
-        <StackPanel x:Name="PoiskandFiltr" Visibility="Visible" Orientation="Horizontal" Height="35" DockPanel.Dock="Top">
+        <StackPanel x:Name="PoiskandFiltr" Visibility="Collapsed" Orientation="Horizontal" Height="35" DockPanel.Dock="Top">
             <TextBox x:Name="Poisk" Width="200" TextChanged="ObnovaKatalog"/>
             <ComboBox x:Name="FiltrProizvoditel" SelectionChanged="ObnovaKatalog">
             </ComboBox>

@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="StroyMateriali.Windows.ZakazCard"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Border Padding="5" Background="White">
+        <DockPanel>
+            <Border DockPanel.Dock="Right" Width="150">
+                <TextBlock x:Name="DataDostavkaBlock"
+                           VerticalAlignment="Center"
+                           TextWrapping="Wrap"/>
+            </Border>
+
+            <Border BorderThickness="1">
+                <StackPanel>
+                    <TextBlock x:Name="NomerBlock" Style="{StaticResource TextBlocks}"/>
+                    <TextBlock x:Name="StatusBlock"/>
+                    <TextBlock x:Name="PynktBlock" TextWrapping="Wrap"/>
+                    <TextBlock x:Name="DataZakazaBlock"/>
+                </StackPanel>
+            </Border>
+        </DockPanel>
+    </Border>
+</UserControl>
