@@ -11,7 +11,8 @@ namespace StroyMateriali.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Linq;
+
     public partial class Zakaz
     {
         public Zakaz()
@@ -26,6 +27,8 @@ namespace StroyMateriali.Models
         public System.DateTime DataDostavka { get; set; }
         public System.DateTime DataZakaza { get; set; }
         public int Kod { get; set; }
+
+        public string ImaPolzovatel => Polzovatel.FirstOrDefault()?.Ima ?? "";
     
         public virtual ICollection<ZakazTovar> ZakazTovar { get; set; }
         public virtual ICollection<Polzovatel> Polzovatel { get; set; }

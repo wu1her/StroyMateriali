@@ -104,5 +104,12 @@ namespace StroyMateriali.Windows
         {
             Obnova();
         }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            var okno = new StroyMateriali.Windows.Auth();
+            okno.Show();
+            Close();
+        }
     }
 }

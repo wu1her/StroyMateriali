@@ -14,11 +14,11 @@
                 <TextBlock>Описание</TextBlock>
                 <TextBox x:Name="OpisanieBox" MaxLength="350"/>
                 <TextBlock>Производитель</TextBlock>
-                <ComboBox x:Name="ProizvoditelBox"></ComboBox>
+                <ComboBox x:Name="ProizvoditelBox" DisplayMemberPath="Ima"/>
                 <TextBlock>Поставщик</TextBlock>
-                <ComboBox x:Name="PostavshikBox"></ComboBox>
+                <ComboBox x:Name="PostavshikBox" DisplayMemberPath="Ima"/>
                 <TextBlock>Категория</TextBlock>
-                <ComboBox x:Name="KategoriaBox"></ComboBox>
+                <ComboBox x:Name="KategoriaBox" DisplayMemberPath="Ima"/>
                 <TextBlock>Количество</TextBlock>
                 <TextBox x:Name="KolichestvoBox"/>
                 <TextBlock>Единица</TextBlock>
@@ -31,8 +31,8 @@
                 <Viewbox Height="200" Width="200" Stretch="Uniform">
                     <Image Source="/Resources/Image/picture.png" x:Name="Photo"/>
                 </Viewbox>
-                <Button x:Name="PhotoChange">Загрузить фото</Button>
-                <Button x:Name="Save">Сохранить</Button>
+                <Button Content="Загрузить фото" Click="PhotoAdd_Click"/>
+                <Button x:Name="Save" Content="Сохранить" Click="Save_Click"/>
             </StackPanel>
         </ScrollViewer>
     </DockPanel>
