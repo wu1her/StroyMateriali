@@ -73,7 +73,7 @@ namespace StroyMateriali.Windows
         private void PhotoAdd_Click(object sender, RoutedEventArgs e)
         {
             var dialog = new OpenFileDialog();
-            dialog.Filter = "Изображения";
+            dialog.Filter = "Изображения|*.jpg;*.jpeg;*.png";
 
             if (dialog.ShowDialog() != true)
                 return;
