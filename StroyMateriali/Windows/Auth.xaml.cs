@@ -17,27 +17,18 @@ namespace StroyMateriali.Windows
         {
             try
             {
-                bool isError = false;
-                if (string.IsNullOrWhiteSpace(LoginBox.Text))
-                    isError = true;
-                if (string.IsNullOrWhiteSpace(ParolBox.Text))
-                    isError = true;
-                if (isError == true)
-                    MessageBox.Show("Логин или пароль неверные");
                 var user = db.Polzovatel.FirstOrDefault(
                     dannie => dannie.Login == LoginBox.Text && dannie.Parol == ParolBox.Text);
-                if (user == null)
-                    MessageBox.Show("Логин или пароль неверные");
-                else
-                {
-                    var okno = new StroyMateriali.Windows.Katalog(user);
-                    okno.Show();
+
+                    if (user != null)
+                    {
+                    new Katalog(user).Show();
                     Close();
-                }
+                    } else { MessageBox.Show("Логин или пароль неверные");}
             }
             catch(Exception)
             {
-                MessageBox.Show("Ошибка авторизации");
+                MessageBox.Show("Логин или пароль неверные");
             }
         }
 
